@@ -1,0 +1,1 @@
+<li><a title='[field:title/]'><img class='img-responsive' src='[field:picname/]' alt='[field:title/]' /></a></li>

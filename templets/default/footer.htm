@@ -1,0 +1,72 @@
+<div id="footer">
+  <div id="footer_top">
+    <div class="container">
+      <div class="line">
+        <div class="xl12 xs6" id="footer_menu">
+          <div class="x4"> {dede:type typeid='2'}
+            <h3>[field:typename/]</h3>
+            {/dede:type}
+            <ul>
+              {dede:channel typeid='2' type ='son'}
+              <li><a href='[field:typelink/]'>[field:typename/]</a></li>
+              {/dede:channel}
+            </ul>
+          </div>
+          <div class="x4"> {dede:type typeid='4'}
+            <h3>[field:typename/]</h3>
+            {/dede:type}
+            <ul>
+              {dede:channel typeid='4' type ='son'}
+              <li><a href='[field:typelink/]' title="[field:typename/]">[field:typename/]</a></li>
+              {/dede:channel}
+            </ul>
+          </div>
+          <div class="x4"> {dede:type typeid='5'}
+            <h3>[field:typename/]</h3>
+            {/dede:type}
+            <ul>
+              {dede:channel typeid='5' type ='son'}
+              <li><a href='[field:typelink/]'>[field:typename/]</a></li>
+              {/dede:channel}
+            </ul>
+          </div>
+        </div>
+        <div class="xl12 xs3" id="footer_contact">
+          <h3>联系我们</h3>
+          <form action="/plus/diy.php" method="post">
+            <input type="hidden" name="action" value="post" />
+            <input type="hidden" name="diyid" value="1" />
+            <input type="hidden" name="do" value="2" />
+            <input type="text" name="xingming" placeholder="姓名" />
+            <input type="email" name="yx" placeholder="邮箱" />
+            <textarea name="nr"></textarea>
+            <input type="hidden" name="dede_fields" value="xingming,text;yx,text;nr,text" />
+            <input type="hidden" name="dede_fieldshash" value="ef0c15cc1691d1491614ccec4c437d0f" />
+            <input type="submit" value="提交" />
+          </form>
+        </div>
+        <div class="xl12 xs2 xs1-move" id="footer_weixin">
+          <h3>微信扫一扫</h3>
+          <img src='/skin/images/2017620154451307.jpg' width='121' height='121' alt=''> </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer_bottom">
+    <div class="container">
+      <div class="line">
+          <div class="xs6 xl12" id="footer_copy"> {dede:global.cfg_powerby/}&nbsp;&nbsp;<a href="//zhanoo.com">站窝窝</a>&nbsp;&nbsp; </div>
+        <div class="xs6 xl12" id="footer_nav">
+          <ul>
+            <li><a href='/'>网站首页</a></li>
+            {dede:channel row='6' type ='top'}
+            <li>>><a href='[field:typelink/]'>[field:typename/]</a></li>
+            {/dede:channel}
+          </ul>
+        </div>
+      </div>
+      <div class="site_link">友情链接：{dede:flink titlelen='20' row='32' type='text'} 
+        [field:link /] 
+        {/dede:flink}<!--link start--><!--link end--></div>
+    </div>
+  </div>
+</div>

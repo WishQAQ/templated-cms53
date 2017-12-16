@@ -1,0 +1,1 @@
+<div class="x12 text-center" id="index_about_more"><a href="[field:typelink/]" >更&nbsp;多</a></div>

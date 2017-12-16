@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!--
+                       (0 0)
+   +-------------oOO----(_)----------------+
+   |           Powered By 织梦猫           |
+   |            www.dedemao.com            |
+   |        E-mail:admin@dedemao.com       |
+   +--------------------------oOO----------+
+                      |__|__|
+                       || ||
+                      ooO Ooo
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="description" content="{dede:global.cfg_description/}" />
+<link href="/skin/css/style.css" type="text/css" rel="stylesheet" />
+<link href="/skin/css/reset.css" type="text/css" rel="stylesheet" />
+<link href="/skin/css/pintuer.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/skin/js/jquery.min.js"></script>
+<script type="text/javascript" src="/skin/js/common.js"></script>
+<script type="text/javascript" src="/skin/js/pintuer.js"></script>
+<script type="text/javascript" src="/skin/js/touchslide.1.1.js"></script>
+<!--[if lte IE 6]>
+<script src="/skin/js/png.js" type="text/javascript"></script>
+<script type="text/javascript">
+DD_belatedPNG.fix('*');
+</script>
+<![endif]-->
+
+</head>
+<body>
+<!--头部开始--> 
+{dede:include filename="head.htm"/}
+<div id="flash">
+  <div id="slideBox" class="slideBox">
+    <div class="bd">
+      <ul>
+        {dede:arclist row=3 typeid='7'}
+        <li><a href="" title="1"><img src="[field:picname/]" /></a></li>
+        {/dede:arclist}
+      </ul>
+    </div>
+    <div class="hd">
+      <ul>
+      </ul>
+    </div>
+  </div>
+</div>
+<script>
+TouchSlide({ 
+slideCell:"#slideBox",
+titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+mainCell:".bd ul", 
+effect:"leftLoop", 
+autoPlay:true,//自动播放
+autoPage:true, //自动分页
+});
+</script> 
+
+<!--内容区开始-->
+<div id="main">
+  <div id="index_about">
+    <div class="container">
+      <div class="line-small">
+        <div class="x12 text-center" id="index_about_title">
+          <h3>关于我们</h3>
+        </div>
+        <div class="x12 text-center" id="index_about_con">
+          <p style="text-align:center;"> {dede:sql sql='Select content from dede_arctype where id=2'} 
+            
+            [field:content  function='cn_substr(html2text(@me),1000)'/]...
+            
+            {/dede:sql} </p>
+        </div>
+        {dede:type typeid='2'}
+        <div class="x12 text-center" id="index_about_more"><a href="[field:typelink/]" >更&nbsp;多</a></div>
+        {/dede:type} </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div id="index_product">
+    <div id="index_product_title">
+      <h3>农副产品，为您严选天然</h3>
+      <p>我们用心挑选，所有产品均为加拿大及产品生产国本地商店出售的商品。<br />
+        拒绝“中国特供”和“外国商标中国产”，让您和您的亲友，如同加拿大本地居民一样，享用真正自然，健康的食品。</p>
+    </div>
+    <div id="index_product_list">
+      <div class="container">
+        <div class="line-big"> {dede:arclist row=8 typeid='4'}
+          <div class='xm3 xs6 xl12 pro_li'>
+            <div class='li_img'><i></i><img src='[field:picname/]' /></div>
+            <div class='li_txt'><a href='[field:arcurl/]' title='[field:title/] ' >
+              <h5>[field:title/] </h5>
+              <p></p>
+              </a></div>
+          </div>
+          {/dede:arclist} </div>
+      </div>
+    </div>
+    <div class="text-center" id="index_product_more">{dede:type typeid='4'}<a href="[field:typelink/]" >更&nbsp;多</a>{/dede:type}</div>
+  </div>
+  <div class="clear"></div>
+  <div id="index_news">
+    <div class="container">
+      <div class="line-big">
+        <div class="x12 text-center" id="index_news_title">
+          <h3>公司动态</h3>
+          <p>享受安全的食品是一种基本权利</p>
+        </div>
+        <div id="index_news_list"> {dede:arclist row=4 typeid='1'}
+          <div class='xb6 xm12 xs12 xl12 new_li'><a href='[field:arcurl/]' title='[field:title/] '><i></i>
+            <div class='time'><span>8</span><span>[field:pubdate function="MyDate('Y-m',@me)"/]</span></div>
+            <h5>[field:title/] </h5>
+            <p></p>
+            </a></div>
+          {/dede:arclist} </div>
+        <div class="x12 text-center" id="index_news_more">{dede:type typeid='1'}<a href="[field:typelink/]" >更&nbsp;多</a>{/dede:type}</div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div id="index_supply">
+    <div class="container">
+      <div class="line">
+        <div class="x12 text-center" id="index_supply_title">
+          <h3>供应伙伴</h3>
+          <p>我们希望成为优质产品的搬运工，将我们供应伙伴所产直邮中国，由集团旗下的进出口公司负责，保证安全，按时送到您手中。</p>
+        </div>
+        <div id="index_supply_list">
+          <ul>
+            {dede:arclist row=10 typeid='17'}
+            <li><a title='[field:title/]'><img class='img-responsive' src='[field:picname/]' alt='[field:title/]' /></a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+{dede:include filename="footer.htm"/} 
+<!--版权区结束-->
+</body>
+</html>
